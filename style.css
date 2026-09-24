@@ -1,0 +1,126 @@
+/* Mobile First Design */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  padding: 1em;
+  border: 1px solid darkred;
+  text-align: center;
+  background-color: slategray;
+}
+
+body{
+  margin: .5rem;
+  padding: .5rem;
+  border: 1px solid darkred;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  background-color: black;
+  text-align: center;
+}
+
+header, nav, main, footer{
+  grid-column: 1/4;
+} 
+
+main{
+  margin: .5em;
+  padding: .5em;
+  border: 2px solid darkred;
+  background-color: slategray;
+}
+
+main section{
+  padding: .5em;
+}
+
+nav{
+  margin: .5em;
+  padding: .5em;
+}
+
+nav ul{
+  display: flex;
+  flex-direction:column;
+  gap: 1.5rem;
+  align-items: center;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: darkred;
+  color: black;
+  padding: .5rem 1rem;
+  font-size: .7em;
+  text-transform: uppercase;
+}
+
+nav a:hover{
+  background-color: black;
+  color: darkred;
+  border: 1px solid darkred;
+}
+
+.card-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: darkred;
+    text-align: center;
+}
+
+.card-row img{
+    width: 65%;
+    height: 65%;
+    object-fit: cover;
+}
+
+.card-row > section{
+    flex: 1 1 260px;
+    padding: .5rem;
+    background-color: snow;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+h2{
+  margin: .5em;
+  padding: .5em;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+h3{
+  margin: .5rem;
+  padding: .5rem;
+  font-size: 1rem;
+}
+
+p{
+  margin: .5em;
+  padding: .5em;
+  font-size: .7rem;
+  line-height: 1.5;
+  word-spacing: 1px;
+}
+
+footer p{
+    color: darkred;
+}
+
+#performance ul{
+  text-align: left;
+  list-style-position: inside;
+  text-align: center;
+  font-size: .7rem;
+  list-style: none;
+}
