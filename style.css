@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header{
@@ -13,6 +14,7 @@ header{
 }
 
 body{
+  font-family: fantasy, sans-serif;
   margin: .5rem;
   padding: .5rem;
   border: 1px solid darkred;
@@ -76,20 +78,36 @@ nav a:hover{
 }
 
 .card-row img{
-    width: 65%;
-    height: 65%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
 }
 
 .card-row > section{
     flex: 1 1 260px;
-    padding: .5rem;
+    padding: 1rem;
+    min-width: 0;
     background-color: snow;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-row > section:hover{
+    background-color: black;
+    border: 1px solid darkred;
+    color: darkred;
+}
+
+.card-row p a{
+  color: darkred;
 }
 
 h1{
   font-weight: bold;
   font-size: 1.5rem;
+  color:darkred;
 }
 
 h2{
@@ -97,6 +115,7 @@ h2{
   padding: .5em;
   font-size: 1.25rem;
   text-align: center;
+  color: darkred;
 }
 
 h3{
@@ -117,10 +136,75 @@ footer p{
     color: darkred;
 }
 
+#performance h3{
+  text-decoration: underline;
+}
+
 #performance ul{
-  text-align: left;
   list-style-position: inside;
   text-align: center;
   font-size: .7rem;
+  font-weight: bold;
   list-style: none;
+}
+@media (min-width: 650px){
+  body{
+    grid-template-columns: 1fr;
+  }
+  
+  header, nav, main, footer{
+    grid-column: 1 / -1;
+  }
+
+  nav ul{
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+
+  #performance ul{
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .card-row{
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .card-row img{
+    width: 70%;
+    height: 70%;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+  h2{
+    font-size: 1.5rem;
+  }
+
+  h3{
+    font-size: 1.25rem;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px){
+  body{
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  nav a {
+    font-size: 1.25em;
+  }
+
 }
